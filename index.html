@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <h1 class="app__title" aria-label="Calculator">Calculator</h1>
+        <div class="app__actions">
+          <button id="themeToggle" class="btn btn--icon" aria-label="Toggle theme" title="Toggle theme">
+            <span class="icon" aria-hidden="true">🌙</span>
+          </button>
+          <button id="historyToggle" class="btn btn--icon" aria-label="Toggle history" title="Toggle history">
+            <span class="icon" aria-hidden="true">🕘</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="calc" role="application" aria-label="Calculator">
+        <section class="display" aria-live="polite" aria-atomic="true">
+          <div id="displayExpression" class="display__expression" title="Expression"></div>
+          <div id="displayValue" class="display__value" title="Current value">0</div>
+        </section>
+
+        <section class="keys" aria-label="Calculator keys">
+          <button class="key key--util" data-action="clear-all" aria-keyshortcuts="Escape">AC</button>
+          <button class="key key--util" data-action="clear" aria-keyshortcuts="Delete">C</button>
+          <button class="key key--util" data-action="backspace" aria-keyshortcuts="Backspace">⌫</button>
+          <button class="key key--op" data-op="/" aria-keyshortcuts="/">÷</button>
+
+          <button class="key" data-digit="7" aria-keyshortcuts="7">7</button>
+          <button class="key" data-digit="8" aria-keyshortcuts="8">8</button>
+          <button class="key" data-digit="9" aria-keyshortcuts="9">9</button>
+          <button class="key key--op" data-op="*" aria-keyshortcuts="*">×</button>
+
+          <button class="key" data-digit="4" aria-keyshortcuts="4">4</button>
+          <button class="key" data-digit="5" aria-keyshortcuts="5">5</button>
+          <button class="key" data-digit="6" aria-keyshortcuts="6">6</button>
+          <button class="key key--op" data-op="-" aria-keyshortcuts="-">−</button>
+
+          <button class="key" data-digit="1" aria-keyshortcuts="1">1</button>
+          <button class="key" data-digit="2" aria-keyshortcuts="2">2</button>
+          <button class="key" data-digit="3" aria-keyshortcuts="3">3</button>
+          <button class="key key--op" data-op="+" aria-keyshortcuts="+">+</button>
+
+          <button class="key" data-action="plusminus">±</button>
+          <button class="key" data-digit="0" aria-keyshortcuts="0">0</button>
+          <button class="key" data-action="decimal" aria-keyshortcuts=".">.</button>
+          <button class="key key--equals" data-action="equals" aria-keyshortcuts="Enter">=</button>
+
+          <button class="key key--wide key--util" data-action="percent" aria-keyshortcuts="%">%</button>
+          <button class="key key--wide key--util" data-action="ans" aria-keyshortcuts="a">Ans</button>
+        </section>
+      </main>
+
+      <aside id="history" class="history" aria-label="Calculation history" aria-hidden="true">
+        <div class="history__header">
+          <h2>History</h2>
+          <button id="clearHistory" class="btn btn--text" title="Clear history">Clear</button>
+        </div>
+        <ol id="historyList" class="history__list" aria-live="polite"></ol>
+        <p id="historyEmpty" class="history__empty">No history yet</p>
+      </aside>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
+

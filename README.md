@@ -1,3 +1,32 @@
+# Calculator (Web)
+
+Modern, responsive calculator with keyboard support, history, and light/dark themes.
+
+## Features
+
+- Standard operations: +, −, ×, ÷, %
+- Sign toggle (±), decimal input, backspace, clear entry (C) and all clear (AC)
+- Calculation history with reuse-on-click
+- Keyboard support: digits, ., +, -, *, /, %, Enter, Backspace, Delete, Escape
+- Light/Dark theme toggle (persists)
+
+## Run
+
+Open `index.html` in a browser. No build step required.
+
+On a local dev server (recommended for file URLs and caching):
+
+```bash
+npx serve .
+```
+
+Then navigate to the served URL printed by the command.
+
+## Notes
+
+- Percent works like many handheld calculators: with a pending operator, converts the current entry to a percentage of the first operand.
+- Very large or very small numbers are shown in scientific notation.
+
 # Spring MVC Tutorial for Beginners
 Welcome to our Course on Spring MVC. Go to [Step wise details](#steps-1-to-7---build-a-normal-web-application) to understand all the concepts you would learn in this course. 
 We have all the code at the end of each step in  (Step01.md, Step02.md, Step37.md). Also present are some zip files with code at the end of some steps(Step07.zip to Step37.zip).
